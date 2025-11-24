@@ -8,6 +8,12 @@ export const catalog = [
 		priceUSD: 2250.00,
 		costPrice: 0.00,
 		hsCode: "4202229010",
+		hsCodes: {
+			default: "4202229010", // UK/EU export
+			US: "4202224500", // USA import
+			CH: "4202229010", // Switzerland import
+			AU: "42022210" // Australia import (8-digit)
+		},
 		country: "United Kingdom",
 		color: "Cream Conac",
 		brand: "Ratsey & Lapthorn",
@@ -28,6 +34,12 @@ export const catalog = [
 		priceUSD: 140.63,
 		costPrice: 0.00,
 		hsCode: "56090000",
+		hsCodes: {
+			default: "56090000", // UK/EU export
+			US: "5609004000", // USA import
+			CH: "56090000", // Switzerland import
+			AU: "56090010" // Australia import (8-digit)
+		},
 		country: "United Kingdom",
 		color: "Black",
 		brand: "Ratsey & Lapthorn",
@@ -48,6 +60,12 @@ export const catalog = [
 		priceUSD: 140.63,
 		costPrice: 0.00,
 		hsCode: "56090000",
+		hsCodes: {
+			default: "56090000", // UK/EU export
+			US: "5609004000", // USA import
+			CH: "56090000", // Switzerland import
+			AU: "56090010" // Australia import (8-digit)
+		},
 		country: "United Kingdom",
 		color: "Cream Conac",
 		brand: "Ratsey & Lapthorn",
@@ -68,6 +86,12 @@ export const catalog = [
 		priceUSD: 140.63,
 		costPrice: 0.00,
 		hsCode: "56090000",
+		hsCodes: {
+			default: "56090000", // UK/EU export
+			US: "5609004000", // USA import
+			CH: "56090000", // Switzerland import
+			AU: "56090010" // Australia import (8-digit)
+		},
 		country: "United Kingdom",
 		color: "White",
 		brand: "Ratsey & Lapthorn",
@@ -88,6 +112,12 @@ export const catalog = [
 		priceUSD: 140.63,
 		costPrice: 0.00,
 		hsCode: "56090000",
+		hsCodes: {
+			default: "56090000", // UK/EU export
+			US: "5609004000", // USA import
+			CH: "56090000", // Switzerland import
+			AU: "56090010" // Australia import (8-digit)
+		},
 		country: "United Kingdom",
 		color: "Black",
 		brand: "Ratsey & Lapthorn",
@@ -108,6 +138,12 @@ export const catalog = [
 		priceUSD: 112.50,
 		costPrice: 0.00,
 		hsCode: "56090000",
+		hsCodes: {
+			default: "56090000", // UK/EU export
+			US: "5609004000", // USA import
+			CH: "56090000", // Switzerland import
+			AU: "56090010" // Australia import (8-digit)
+		},
 		country: "United Kingdom",
 		color: "Cream Conac",
 		brand: "Ratsey & Lapthorn",
@@ -128,6 +164,12 @@ export const catalog = [
 		priceUSD: 112.50,
 		costPrice: 0.00,
 		hsCode: "56090000",
+		hsCodes: {
+			default: "56090000", // UK/EU export
+			US: "5609004000", // USA import
+			CH: "56090000", // Switzerland import
+			AU: "56090010" // Australia import (8-digit)
+		},
 		country: "United Kingdom",
 		color: "White",
 		brand: "Ratsey & Lapthorn",
@@ -148,6 +190,12 @@ export const catalog = [
 		priceUSD: 112.50,
 		costPrice: 0.00,
 		hsCode: "4202229010",
+		hsCodes: {
+			default: "4202229010", // UK/EU export
+			US: "4202224500", // USA import
+			CH: "4202229010", // Switzerland import
+			AU: "42022210" // Australia import (8-digit)
+		},
 		country: "Italy",
 		color: "Black",
 		brand: "Ratsey & Lapthorn",
@@ -168,6 +216,12 @@ export const catalog = [
 		priceUSD: 140.63,
 		costPrice: 0.00,
 		hsCode: "4202229010",
+		hsCodes: {
+			default: "4202229010", // UK/EU export
+			US: "4202224500", // USA import
+			CH: "4202229010", // Switzerland import
+			AU: "42022210" // Australia import (8-digit)
+		},
 		country: "Italy",
 		color: "Cream Conac",
 		brand: "Ratsey & Lapthorn",
@@ -188,6 +242,12 @@ export const catalog = [
 		priceUSD: 140.63,
 		costPrice: 0.00,
 		hsCode: "4202229010",
+		hsCodes: {
+			default: "4202229010", // UK/EU export
+			US: "4202224500", // USA import
+			CH: "4202229010", // Switzerland import
+			AU: "42022210" // Australia import (8-digit)
+		},
 		country: "Italy",
 		color: "White",
 		brand: "Ratsey & Lapthorn",
@@ -208,6 +268,12 @@ export const catalog = [
 		priceUSD: 140.63,
 		costPrice: 0.00,
 		hsCode: "4202229010",
+		hsCodes: {
+			default: "4202229010", // UK/EU export
+			US: "4202224500", // USA import
+			CH: "4202229010", // Switzerland import
+			AU: "42022210" // Australia import (8-digit)
+		},
 		country: "Italy",
 		color: "Black",
 		brand: "Ratsey & Lapthorn",
@@ -228,6 +294,12 @@ export const catalog = [
 		priceUSD: 112.50,
 		costPrice: 0.00,
 		hsCode: "4202229010",
+		hsCodes: {
+			default: "4202229010", // UK/EU export
+			US: "4202224500", // USA import
+			CH: "4202229010", // Switzerland import
+			AU: "42022210" // Australia import (8-digit)
+		},
 		country: "Italy",
 		color: "Cream Conac",
 		brand: "Ratsey & Lapthorn",
@@ -248,6 +320,12 @@ export const catalog = [
 		priceUSD: 112.50,
 		costPrice: 0.00,
 		hsCode: "4202229010",
+		hsCodes: {
+			default: "4202229010", // UK/EU export
+			US: "4202224500", // USA import
+			CH: "4202229010", // Switzerland import
+			AU: "42022210" // Australia import (8-digit)
+		},
 		country: "Italy",
 		color: "White",
 		brand: "Ratsey & Lapthorn",
@@ -268,6 +346,12 @@ export const catalog = [
 		priceUSD: 112.50,
 		costPrice: 0.00,
 		hsCode: "4202229010",
+		hsCodes: {
+			default: "4202229010", // UK/EU export
+			US: "4202224500", // USA import
+			CH: "4202229010", // Switzerland import
+			AU: "42022210" // Australia import (8-digit)
+		},
 		country: "Italy",
 		color: "Black",
 		brand: "Ratsey & Lapthorn",
@@ -288,6 +372,12 @@ export const catalog = [
 		priceUSD: 140.63,
 		costPrice: 0.00,
 		hsCode: "4202229010",
+		hsCodes: {
+			default: "4202229010", // UK/EU export
+			US: "4202224500", // USA import
+			CH: "4202229010", // Switzerland import
+			AU: "42022210" // Australia import (8-digit)
+		},
 		country: "Italy",
 		color: "Cream Conac",
 		brand: "Ratsey & Lapthorn",
@@ -308,6 +398,12 @@ export const catalog = [
 		priceUSD: 140.63,
 		costPrice: 0.00,
 		hsCode: "4202229010",
+		hsCodes: {
+			default: "4202229010", // UK/EU export
+			US: "4202224500", // USA import
+			CH: "4202229010", // Switzerland import
+			AU: "42022210" // Australia import (8-digit)
+		},
 		country: "Italy",
 		color: "White",
 		brand: "Ratsey & Lapthorn",
@@ -328,6 +424,12 @@ export const catalog = [
 		priceUSD: 140.63,
 		costPrice: 0.00,
 		hsCode: "4202229010",
+		hsCodes: {
+			default: "4202229010", // UK/EU export
+			US: "4202224500", // USA import
+			CH: "4202229010", // Switzerland import
+			AU: "42022210" // Australia import (8-digit)
+		},
 		country: "Italy",
 		color: "Black",
 		brand: "Ratsey & Lapthorn",
@@ -348,6 +450,12 @@ export const catalog = [
 		priceUSD: 112.50,
 		costPrice: 0.00,
 		hsCode: "4202229010",
+		hsCodes: {
+			default: "4202229010", // UK/EU export
+			US: "4202224500", // USA import
+			CH: "4202229010", // Switzerland import
+			AU: "42022210" // Australia import (8-digit)
+		},
 		country: "Italy",
 		color: "Cream Conac",
 		brand: "Ratsey & Lapthorn",
@@ -368,6 +476,12 @@ export const catalog = [
 		priceUSD: 112.50,
 		costPrice: 0.00,
 		hsCode: "4202229010",
+		hsCodes: {
+			default: "4202229010", // UK/EU export
+			US: "4202224500", // USA import
+			CH: "4202229010", // Switzerland import
+			AU: "42022210" // Australia import (8-digit)
+		},
 		country: "Italy",
 		color: "White",
 		brand: "Ratsey & Lapthorn",
@@ -388,6 +502,12 @@ export const catalog = [
 		priceUSD: 112.50,
 		costPrice: 0.00,
 		hsCode: "56090000",
+		hsCodes: {
+			default: "56090000", // UK/EU export
+			US: "5609004000", // USA import
+			CH: "56090000", // Switzerland import
+			AU: "56090010" // Australia import (8-digit)
+		},
 		country: "United Kingdom",
 		color: "Black",
 		brand: "Ratsey & Lapthorn",
@@ -408,6 +528,12 @@ export const catalog = [
 		priceUSD: 140.63,
 		costPrice: 0.00,
 		hsCode: "56090000",
+		hsCodes: {
+			default: "56090000", // UK/EU export
+			US: "5609004000", // USA import
+			CH: "56090000", // Switzerland import
+			AU: "56090010" // Australia import (8-digit)
+		},
 		country: "United Kingdom",
 		color: "Cream Conac",
 		brand: "Ratsey & Lapthorn",
@@ -428,6 +554,12 @@ export const catalog = [
 		priceUSD: 140.63,
 		costPrice: 0.00,
 		hsCode: "56090000",
+		hsCodes: {
+			default: "56090000", // UK/EU export
+			US: "5609004000", // USA import
+			CH: "56090000", // Switzerland import
+			AU: "56090010" // Australia import (8-digit)
+		},
 		country: "United Kingdom",
 		color: "White",
 		brand: "Ratsey & Lapthorn",
@@ -448,6 +580,12 @@ export const catalog = [
 		priceUSD: 140.63,
 		costPrice: 0.00,
 		hsCode: "56090000",
+		hsCodes: {
+			default: "56090000", // UK/EU export
+			US: "5609004000", // USA import
+			CH: "56090000", // Switzerland import
+			AU: "56090010" // Australia import (8-digit)
+		},
 		country: "United Kingdom",
 		color: "Black",
 		brand: "Ratsey & Lapthorn",
@@ -468,6 +606,12 @@ export const catalog = [
 		priceUSD: 112.50,
 		costPrice: 0.00,
 		hsCode: "56090000",
+		hsCodes: {
+			default: "56090000", // UK/EU export
+			US: "5609004000", // USA import
+			CH: "56090000", // Switzerland import
+			AU: "56090010" // Australia import (8-digit)
+		},
 		country: "United Kingdom",
 		color: "Cream Conac",
 		brand: "Ratsey & Lapthorn",
@@ -488,6 +632,12 @@ export const catalog = [
 		priceUSD: 112.50,
 		costPrice: 0.00,
 		hsCode: "56090000",
+		hsCodes: {
+			default: "56090000", // UK/EU export
+			US: "5609004000", // USA import
+			CH: "56090000", // Switzerland import
+			AU: "56090010" // Australia import (8-digit)
+		},
 		country: "United Kingdom",
 		color: "White",
 		brand: "Ratsey & Lapthorn",
@@ -508,6 +658,12 @@ export const catalog = [
 		priceUSD: 1856.25,
 		costPrice: 0.00,
 		hsCode: "4202229010",
+		hsCodes: {
+			default: "4202229010", // UK/EU export
+			US: "4202224500", // USA import
+			CH: "4202229010", // Switzerland import
+			AU: "42022210" // Australia import (8-digit)
+		},
 		country: "Italy",
 		color: "Black",
 		brand: "Ratsey & Lapthorn",
@@ -528,6 +684,12 @@ export const catalog = [
 		priceUSD: 1856.25,
 		costPrice: 0.00,
 		hsCode: "4202229010",
+		hsCodes: {
+			default: "4202229010", // UK/EU export
+			US: "4202224500", // USA import
+			CH: "4202229010", // Switzerland import
+			AU: "42022210" // Australia import (8-digit)
+		},
 		country: "Italy",
 		color: "Cream Conac",
 		brand: "Ratsey & Lapthorn",
@@ -548,6 +710,12 @@ export const catalog = [
 		priceUSD: 112.50,
 		costPrice: 0.00,
 		hsCode: "56090000",
+		hsCodes: {
+			default: "56090000", // UK/EU export
+			US: "5609004000", // USA import
+			CH: "56090000", // Switzerland import
+			AU: "56090010" // Australia import (8-digit)
+		},
 		country: "United Kingdom",
 		color: "Black",
 		brand: "Ratsey & Lapthorn",
@@ -568,6 +736,12 @@ export const catalog = [
 		priceUSD: 140.63,
 		costPrice: 0.00,
 		hsCode: "56090000",
+		hsCodes: {
+			default: "56090000", // UK/EU export
+			US: "5609004000", // USA import
+			CH: "56090000", // Switzerland import
+			AU: "56090010" // Australia import (8-digit)
+		},
 		country: "United Kingdom",
 		color: "Cream Conac",
 		brand: "Ratsey & Lapthorn",
@@ -588,6 +762,12 @@ export const catalog = [
 		priceUSD: 140.63,
 		costPrice: 0.00,
 		hsCode: "56090000",
+		hsCodes: {
+			default: "56090000", // UK/EU export
+			US: "5609004000", // USA import
+			CH: "56090000", // Switzerland import
+			AU: "56090010" // Australia import (8-digit)
+		},
 		country: "United Kingdom",
 		color: "White",
 		brand: "Ratsey & Lapthorn",
@@ -608,6 +788,12 @@ export const catalog = [
 		priceUSD: 140.63,
 		costPrice: 0.00,
 		hsCode: "56090000",
+		hsCodes: {
+			default: "56090000", // UK/EU export
+			US: "5609004000", // USA import
+			CH: "56090000", // Switzerland import
+			AU: "56090010" // Australia import (8-digit)
+		},
 		country: "United Kingdom",
 		color: "Black",
 		brand: "Ratsey & Lapthorn",
@@ -628,6 +814,12 @@ export const catalog = [
 		priceUSD: 112.50,
 		costPrice: 0.00,
 		hsCode: "56090000",
+		hsCodes: {
+			default: "56090000", // UK/EU export
+			US: "5609004000", // USA import
+			CH: "56090000", // Switzerland import
+			AU: "56090010" // Australia import (8-digit)
+		},
 		country: "United Kingdom",
 		color: "Cream Conac",
 		brand: "Ratsey & Lapthorn",
@@ -648,6 +840,12 @@ export const catalog = [
 		priceUSD: 112.50,
 		costPrice: 0.00,
 		hsCode: "56090000",
+		hsCodes: {
+			default: "56090000", // UK/EU export
+			US: "5609004000", // USA import
+			CH: "56090000", // Switzerland import
+			AU: "56090010" // Australia import (8-digit)
+		},
 		country: "United Kingdom",
 		color: "White",
 		brand: "Ratsey & Lapthorn",
@@ -668,6 +866,12 @@ export const catalog = [
 		priceUSD: 112.50,
 		costPrice: 0.00,
 		hsCode: "56090000",
+		hsCodes: {
+			default: "56090000", // UK/EU export
+			US: "5609004000", // USA import
+			CH: "56090000", // Switzerland import
+			AU: "56090010" // Australia import (8-digit)
+		},
 		country: "United Kingdom",
 		color: "Black",
 		brand: "Ratsey & Lapthorn",
@@ -688,6 +892,12 @@ export const catalog = [
 		priceUSD: 140.63,
 		costPrice: 0.00,
 		hsCode: "56090000",
+		hsCodes: {
+			default: "56090000", // UK/EU export
+			US: "5609004000", // USA import
+			CH: "56090000", // Switzerland import
+			AU: "56090010" // Australia import (8-digit)
+		},
 		country: "United Kingdom",
 		color: "Cream Conac",
 		brand: "Ratsey & Lapthorn",
@@ -708,6 +918,12 @@ export const catalog = [
 		priceUSD: 140.63,
 		costPrice: 0.00,
 		hsCode: "56090000",
+		hsCodes: {
+			default: "56090000", // UK/EU export
+			US: "5609004000", // USA import
+			CH: "56090000", // Switzerland import
+			AU: "56090010" // Australia import (8-digit)
+		},
 		country: "United Kingdom",
 		color: "White",
 		brand: "Ratsey & Lapthorn",
@@ -728,6 +944,12 @@ export const catalog = [
 		priceUSD: 140.63,
 		costPrice: 0.00,
 		hsCode: "56090000",
+		hsCodes: {
+			default: "56090000", // UK/EU export
+			US: "5609004000", // USA import
+			CH: "56090000", // Switzerland import
+			AU: "56090010" // Australia import (8-digit)
+		},
 		country: "United Kingdom",
 		color: "Black",
 		brand: "Ratsey & Lapthorn",
@@ -748,6 +970,12 @@ export const catalog = [
 		priceUSD: 112.50,
 		costPrice: 0.00,
 		hsCode: "56090000",
+		hsCodes: {
+			default: "56090000", // UK/EU export
+			US: "5609004000", // USA import
+			CH: "56090000", // Switzerland import
+			AU: "56090010" // Australia import (8-digit)
+		},
 		country: "United Kingdom",
 		color: "Cream Conac",
 		brand: "Ratsey & Lapthorn",
@@ -768,6 +996,12 @@ export const catalog = [
 		priceUSD: 112.50,
 		costPrice: 0.00,
 		hsCode: "56090000",
+		hsCodes: {
+			default: "56090000", // UK/EU export
+			US: "5609004000", // USA import
+			CH: "56090000", // Switzerland import
+			AU: "56090010" // Australia import (8-digit)
+		},
 		country: "United Kingdom",
 		color: "White",
 		brand: "Ratsey & Lapthorn",
@@ -788,6 +1022,12 @@ export const catalog = [
 		priceUSD: 112.50,
 		costPrice: 0.00,
 		hsCode: "56090000",
+		hsCodes: {
+			default: "56090000", // UK/EU export
+			US: "5609004000", // USA import
+			CH: "56090000", // Switzerland import
+			AU: "56090010" // Australia import (8-digit)
+		},
 		country: "United Kingdom",
 		color: "Black",
 		brand: "Ratsey & Lapthorn",
@@ -808,6 +1048,12 @@ export const catalog = [
 		priceUSD: 140.63,
 		costPrice: 0.00,
 		hsCode: "56090000",
+		hsCodes: {
+			default: "56090000", // UK/EU export
+			US: "5609004000", // USA import
+			CH: "56090000", // Switzerland import
+			AU: "56090010" // Australia import (8-digit)
+		},
 		country: "United Kingdom",
 		color: "Natural",
 		brand: "Ratsey & Lapthorn",
@@ -828,6 +1074,12 @@ export const catalog = [
 		priceUSD: 140.63,
 		costPrice: 0.00,
 		hsCode: "56090000",
+		hsCodes: {
+			default: "56090000", // UK/EU export
+			US: "5609004000", // USA import
+			CH: "56090000", // Switzerland import
+			AU: "56090010" // Australia import (8-digit)
+		},
 		country: "United Kingdom",
 		color: "White",
 		brand: "Ratsey & Lapthorn",
@@ -848,6 +1100,12 @@ export const catalog = [
 		priceUSD: 140.63,
 		costPrice: 0.00,
 		hsCode: "56090000",
+		hsCodes: {
+			default: "56090000", // UK/EU export
+			US: "5609004000", // USA import
+			CH: "56090000", // Switzerland import
+			AU: "56090010" // Australia import (8-digit)
+		},
 		country: "United Kingdom",
 		color: "Black",
 		brand: "Ratsey & Lapthorn",
@@ -868,6 +1126,12 @@ export const catalog = [
 		priceUSD: 112.50,
 		costPrice: 0.00,
 		hsCode: "56090000",
+		hsCodes: {
+			default: "56090000", // UK/EU export
+			US: "5609004000", // USA import
+			CH: "56090000", // Switzerland import
+			AU: "56090010" // Australia import (8-digit)
+		},
 		country: "United Kingdom",
 		color: "Natural",
 		brand: "Ratsey & Lapthorn",
@@ -888,6 +1152,12 @@ export const catalog = [
 		priceUSD: 112.50,
 		costPrice: 0.00,
 		hsCode: "56090000",
+		hsCodes: {
+			default: "56090000", // UK/EU export
+			US: "5609004000", // USA import
+			CH: "56090000", // Switzerland import
+			AU: "56090010" // Australia import (8-digit)
+		},
 		country: "United Kingdom",
 		color: "White",
 		brand: "Ratsey & Lapthorn",
@@ -908,6 +1178,12 @@ export const catalog = [
 		priceUSD: 506.25,
 		costPrice: 0.00,
 		hsCode: "4202229010",
+		hsCodes: {
+			default: "4202229010", // UK/EU export
+			US: "4202224500", // USA import
+			CH: "4202229010", // Switzerland import
+			AU: "42022210" // Australia import (8-digit)
+		},
 		country: "Italy",
 		color: "Black",
 		brand: "Ratsey & Lapthorn",
@@ -928,6 +1204,12 @@ export const catalog = [
 		priceUSD: 506.25,
 		costPrice: 0.00,
 		hsCode: "4202229010",
+		hsCodes: {
+			default: "4202229010", // UK/EU export
+			US: "4202224500", // USA import
+			CH: "4202229010", // Switzerland import
+			AU: "42022210" // Australia import (8-digit)
+		},
 		country: "Italy",
 		color: "Cream Conac",
 		brand: "Ratsey & Lapthorn",
@@ -948,6 +1230,12 @@ export const catalog = [
 		priceUSD: 337.5,
 		costPrice: 0.00,
 		hsCode: "4202229010",
+		hsCodes: {
+			default: "4202229010", // UK/EU export
+			US: "4202224500", // USA import
+			CH: "4202229010", // Switzerland import
+			AU: "42022210" // Australia import (8-digit)
+		},
 		country: "Italy",
 		color: "Black",
 		brand: "Ratsey & Lapthorn",
@@ -968,6 +1256,12 @@ export const catalog = [
 		priceUSD: 337.5,
 		costPrice: 0.00,
 		hsCode: "4202229010",
+		hsCodes: {
+			default: "4202229010", // UK/EU export
+			US: "4202224500", // USA import
+			CH: "4202229010", // Switzerland import
+			AU: "42022210" // Australia import (8-digit)
+		},
 		country: "Italy",
 		color: "Cream Conac",
 		brand: "Ratsey & Lapthorn",
@@ -988,6 +1282,12 @@ export const catalog = [
 		priceUSD: 1856.25,
 		costPrice: 0.00,
 		hsCode: "4202229010",
+		hsCodes: {
+			default: "4202229010", // UK/EU export
+			US: "4202224500", // USA import
+			CH: "4202229010", // Switzerland import
+			AU: "42022210" // Australia import (8-digit)
+		},
 		country: "Italy",
 		color: "Black",
 		brand: "Ratsey & Lapthorn",
@@ -1008,6 +1308,12 @@ export const catalog = [
 		priceUSD: 1856.25,
 		costPrice: 0.00,
 		hsCode: "4202229010",
+		hsCodes: {
+			default: "4202229010", // UK/EU export
+			US: "4202224500", // USA import
+			CH: "4202229010", // Switzerland import
+			AU: "42022210" // Australia import (8-digit)
+		},
 		country: "Italy",
 		color: "Cream Conac",
 		brand: "Ratsey & Lapthorn",
@@ -1028,6 +1334,12 @@ export const catalog = [
 		priceUSD: 1068.75,
 		costPrice: 0.00,
 		hsCode: "4202229010",
+		hsCodes: {
+			default: "4202229010", // UK/EU export
+			US: "4202224500", // USA import
+			CH: "4202229010", // Switzerland import
+			AU: "42022210" // Australia import (8-digit)
+		},
 		country: "Italy",
 		color: "Black",
 		brand: "Ratsey & Lapthorn",
@@ -1048,6 +1360,12 @@ export const catalog = [
 		priceUSD: 1068.75,
 		costPrice: 0.00,
 		hsCode: "4202229010",
+		hsCodes: {
+			default: "4202229010", // UK/EU export
+			US: "4202224500", // USA import
+			CH: "4202229010", // Switzerland import
+			AU: "42022210" // Australia import (8-digit)
+		},
 		country: "Italy",
 		color: "Cream Conac",
 		brand: "Ratsey & Lapthorn",
@@ -1068,6 +1386,12 @@ export const catalog = [
 		priceUSD: 843.75,
 		costPrice: 0.00,
 		hsCode: "4202229010",
+		hsCodes: {
+			default: "4202229010", // UK/EU export
+			US: "4202224500", // USA import
+			CH: "4202229010", // Switzerland import
+			AU: "42022210" // Australia import (8-digit)
+		},
 		country: "Italy",
 		color: "Black",
 		brand: "Ratsey & Lapthorn",
@@ -1088,6 +1412,12 @@ export const catalog = [
 		priceUSD: 843.75,
 		costPrice: 0.00,
 		hsCode: "4202229010",
+		hsCodes: {
+			default: "4202229010", // UK/EU export
+			US: "4202224500", // USA import
+			CH: "4202229010", // Switzerland import
+			AU: "42022210" // Australia import (8-digit)
+		},
 		country: "Italy",
 		color: "Cream Conac",
 		brand: "Ratsey & Lapthorn",
@@ -1108,6 +1438,12 @@ export const catalog = [
 		priceUSD: 506.25,
 		costPrice: 0.00,
 		hsCode: "4202229010",
+		hsCodes: {
+			default: "4202229010", // UK/EU export
+			US: "4202224500", // USA import
+			CH: "4202229010", // Switzerland import
+			AU: "42022210" // Australia import (8-digit)
+		},
 		country: "Italy",
 		color: "Black",
 		brand: "Ratsey & Lapthorn",
@@ -1128,6 +1464,12 @@ export const catalog = [
 		priceUSD: 506.25,
 		costPrice: 0.00,
 		hsCode: "4202229010",
+		hsCodes: {
+			default: "4202229010", // UK/EU export
+			US: "4202224500", // USA import
+			CH: "4202229010", // Switzerland import
+			AU: "42022210" // Australia import (8-digit)
+		},
 		country: "Italy",
 		color: "Cream Conac",
 		brand: "Ratsey & Lapthorn",
@@ -1148,6 +1490,12 @@ export const catalog = [
 		priceUSD: 112.50,
 		costPrice: 0.00,
 		hsCode: "4202229010",
+		hsCodes: {
+			default: "4202229010", // UK/EU export
+			US: "4202224500", // USA import
+			CH: "4202229010", // Switzerland import
+			AU: "42022210" // Australia import (8-digit)
+		},
 		country: "Italy",
 		color: "Black",
 		brand: "Ratsey & Lapthorn",
@@ -1168,6 +1516,12 @@ export const catalog = [
 		priceUSD: 140.63,
 		costPrice: 0.00,
 		hsCode: "4202229010",
+		hsCodes: {
+			default: "4202229010", // UK/EU export
+			US: "4202224500", // USA import
+			CH: "4202229010", // Switzerland import
+			AU: "42022210" // Australia import (8-digit)
+		},
 		country: "Italy",
 		color: "Cream Conac",
 		brand: "Ratsey & Lapthorn",
@@ -1188,6 +1542,12 @@ export const catalog = [
 		priceUSD: 140.63,
 		costPrice: 0.00,
 		hsCode: "4202229010",
+		hsCodes: {
+			default: "4202229010", // UK/EU export
+			US: "4202224500", // USA import
+			CH: "4202229010", // Switzerland import
+			AU: "42022210" // Australia import (8-digit)
+		},
 		country: "Italy",
 		color: "White",
 		brand: "Ratsey & Lapthorn",
@@ -1208,6 +1568,12 @@ export const catalog = [
 		priceUSD: 140.63,
 		costPrice: 0.00,
 		hsCode: "4202229010",
+		hsCodes: {
+			default: "4202229010", // UK/EU export
+			US: "4202224500", // USA import
+			CH: "4202229010", // Switzerland import
+			AU: "42022210" // Australia import (8-digit)
+		},
 		country: "Italy",
 		color: "Black",
 		brand: "Ratsey & Lapthorn",
@@ -1228,6 +1594,12 @@ export const catalog = [
 		priceUSD: 112.50,
 		costPrice: 0.00,
 		hsCode: "4202229010",
+		hsCodes: {
+			default: "4202229010", // UK/EU export
+			US: "4202224500", // USA import
+			CH: "4202229010", // Switzerland import
+			AU: "42022210" // Australia import (8-digit)
+		},
 		country: "Italy",
 		color: "Cream Conac",
 		brand: "Ratsey & Lapthorn",
@@ -1248,6 +1620,12 @@ export const catalog = [
 		priceUSD: 112.50,
 		costPrice: 0.00,
 		hsCode: "4202229010",
+		hsCodes: {
+			default: "4202229010", // UK/EU export
+			US: "4202224500", // USA import
+			CH: "4202229010", // Switzerland import
+			AU: "42022210" // Australia import (8-digit)
+		},
 		country: "Italy",
 		color: "White",
 		brand: "Ratsey & Lapthorn",
@@ -1268,6 +1646,12 @@ export const catalog = [
 		priceUSD: 112.50,
 		costPrice: 0.00,
 		hsCode: "56090000",
+		hsCodes: {
+			default: "56090000", // UK/EU export
+			US: "5609004000", // USA import
+			CH: "56090000", // Switzerland import
+			AU: "56090010" // Australia import (8-digit)
+		},
 		country: "United Kingdom",
 		color: "Black",
 		brand: "Ratsey & Lapthorn",
@@ -1288,6 +1672,12 @@ export const catalog = [
 		priceUSD: 140.63,
 		costPrice: 0.00,
 		hsCode: "56090000",
+		hsCodes: {
+			default: "56090000", // UK/EU export
+			US: "5609004000", // USA import
+			CH: "56090000", // Switzerland import
+			AU: "56090010" // Australia import (8-digit)
+		},
 		country: "United Kingdom",
 		color: "Cream Conac",
 		brand: "Ratsey & Lapthorn",
@@ -1308,6 +1698,12 @@ export const catalog = [
 		priceUSD: 140.63,
 		costPrice: 0.00,
 		hsCode: "56090000",
+		hsCodes: {
+			default: "56090000", // UK/EU export
+			US: "5609004000", // USA import
+			CH: "56090000", // Switzerland import
+			AU: "56090010" // Australia import (8-digit)
+		},
 		country: "United Kingdom",
 		color: "White",
 		brand: "Ratsey & Lapthorn",
@@ -1328,6 +1724,12 @@ export const catalog = [
 		priceUSD: 140.63,
 		costPrice: 0.00,
 		hsCode: "56090000",
+		hsCodes: {
+			default: "56090000", // UK/EU export
+			US: "5609004000", // USA import
+			CH: "56090000", // Switzerland import
+			AU: "56090010" // Australia import (8-digit)
+		},
 		country: "United Kingdom",
 		color: "Black",
 		brand: "Ratsey & Lapthorn",
@@ -1348,6 +1750,12 @@ export const catalog = [
 		priceUSD: 112.50,
 		costPrice: 0.00,
 		hsCode: "56090000",
+		hsCodes: {
+			default: "56090000", // UK/EU export
+			US: "5609004000", // USA import
+			CH: "56090000", // Switzerland import
+			AU: "56090010" // Australia import (8-digit)
+		},
 		country: "United Kingdom",
 		color: "Cream Conac",
 		brand: "Ratsey & Lapthorn",
@@ -1368,6 +1776,12 @@ export const catalog = [
 		priceUSD: 112.50,
 		costPrice: 0.00,
 		hsCode: "56090000",
+		hsCodes: {
+			default: "56090000", // UK/EU export
+			US: "5609004000", // USA import
+			CH: "56090000", // Switzerland import
+			AU: "56090010" // Australia import (8-digit)
+		},
 		country: "United Kingdom",
 		color: "White",
 		brand: "Ratsey & Lapthorn",

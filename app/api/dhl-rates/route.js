@@ -35,17 +35,19 @@ export async function POST(request) {
 		// 1. Mock Server: https://api-mock.dhl.com/mydhlapi (requires production access)
 		// 2. Test Environment: https://express.api.dhl.com/mydhlapi/test (for sandbox/test credentials)
 		// 3. Production: https://express.api.dhl.com/mydhlapi (requires production approval)
+		// Using /landed-cost endpoint for duty, tax, and shipping charge calculations
 		const baseUrl = dhlUseProduction
 			? "https://express.api.dhl.com/mydhlapi"
 			: "https://express.api.dhl.com/mydhlapi/test";
-		const apiEndpoint = `${baseUrl}/rates`;
+		const apiEndpoint = `${baseUrl}/landed-cost`;
 
 		// Basic Auth: username = API_KEY, password = API_SECRET
-		// Also include X-API-KEY header as per user requirements
+		// Add required headers for DHL API
 		const headers = {
 			"Content-Type": "application/json",
 			"Authorization": `Basic ${auth}`,
 			"X-API-KEY": dhlApiKey,
+			"x-version": "3.1.0",
 		};
 
 		console.log("DHL API Request:", {
@@ -53,10 +55,8 @@ export async function POST(request) {
 			environment: dhlUseProduction ? "production" : "test",
 			hasBasicAuth: !!headers.Authorization,
 			hasXApiKey: !!headers["X-API-KEY"],
-			apiKeyPrefix: dhlApiKey?.substring(0, 4) + "***",
-			apiKeyLength: dhlApiKey?.length,
-			apiSecretLength: dhlApiSecret?.length,
 			accountNumber: dhlAccountNumber?.substring(0, 3) + "***",
+			itemsCount: body.items?.length,
 		});
 
 		const response = await fetch(apiEndpoint, {

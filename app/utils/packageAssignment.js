@@ -55,9 +55,16 @@ export function buildDHLRequest(sender, recipient, packages) {
 	const plannedShippingDateAndTime = new Date();
 	plannedShippingDateAndTime.setDate(plannedShippingDateAndTime.getDate() + 1);
 
+	// Proper decimal rounding to avoid floating point issues
+	// Rounds to specified decimal places as required by DHL API
+	const roundToDecimal = (num, decimals = 5) => {
+		const factor = Math.pow(10, decimals);
+		return Math.round(num * factor) / factor;
+	};
+
 	const dhlPackages = packages.map((pkg, index) => ({
 		typeCode: "3BX",
-		weight: pkg.totalWeight,
+		weight: roundToDecimal(pkg.totalWeight, 3), // Round to 3 decimal places (multipleOf: 0.001)
 		dimensions: {
 			length: pkg.package.length,
 			width: pkg.package.width,
@@ -78,75 +85,72 @@ export function buildDHLRequest(sender, recipient, packages) {
 	// Convert prices to GBP if needed
 	// Rates: 1 GBP = 1.15 EUR, 1 GBP = 1.35 USD
 	const convertToGBP = (price, currency) => {
+		let convertedPrice = price;
 		if (currency === "EUR") {
-			return price / 1.15;
+			convertedPrice = price / 1.15;
 		} else if (currency === "USD") {
-			return price / 1.35;
+			convertedPrice = price / 1.35;
 		}
-		return price;
+		// Round to 5 decimal places to match DHL API requirement
+		return roundToDecimal(convertedPrice, 5);
 	};
 
-	const lineItems = Object.values(uniqueItems).map((item) => {
+	const lineItems = Object.values(uniqueItems).map((item, index) => {
 		const priceInGBP = convertToGBP(item.price, item.currency || "GBP");
-		return {
-			number: 1,
+
+		// Select appropriate HS code based on recipient country
+		let hsCode = item.hsCode; // default/fallback
+		if (item.hsCodes && recipient.countryCode) {
+			// Try country-specific code, fallback to default if not found
+			hsCode = item.hsCodes[recipient.countryCode] || item.hsCodes.default || item.hsCode;
+		}
+
+		const lineItem = {
+			number: index + 1,
 			description: item.customsDescription || item.title,
-			price: priceInGBP,
-			quantity: {
-				value: item.quantity,
-				unitOfMeasurement: "PCS",
-			},
-			commodityCodes: [
-				{
-					typeCode: "outbound",
-					value: item.hsCode || "",
-				},
-			],
-			exportReasonType: "permanent",
-			manufacturerCountry: item.country || sender.countryCode,
-			weight: {
-				netValue: item.weight || 0.1,
-				grossValue: item.weight || 0.1,
-			},
+			unitPrice: roundToDecimal(priceInGBP, 5), // Round to 5 decimal places
+			unitPriceCurrencyCode: "GBP",
+			quantity: item.quantity,
+			quantityType: "prt", // Required: prt (part) or box
+			manufacturerCountry: sender.countryCode, // Must be 2-letter country code
+			weight: roundToDecimal(item.weight || 0.1, 3), // Round to 3 decimal places (multipleOf: 0.001)
+			weightUnitOfMeasurement: "metric", // Required for landed cost
 		};
+
+		// Include commodityCode if available
+		if (hsCode && hsCode.trim() !== "") {
+			lineItem.commodityCode = hsCode;
+		}
+
+		// Always include estimatedTariffRateType as per DHL example
+		lineItem.estimatedTariffRateType = "highest_rate";
+
+		return lineItem;
 	});
 
-	const totalValueGBP = allItems.reduce((sum, item) => {
-		const priceInGBP = convertToGBP(item.price, item.currency || "GBP");
-		return sum + (priceInGBP * (item.quantity || 1));
-	}, 0);
+	const totalValueGBP = roundToDecimal(
+		allItems.reduce((sum, item) => {
+			const priceInGBP = convertToGBP(item.price, item.currency || "GBP");
+			return sum + (priceInGBP * (item.quantity || 1));
+		}, 0),
+		5
+	);
 
 	return {
 		customerDetails: {
 			shipperDetails: {
-				postalAddress: {
-					postalCode: sender.postalCode,
-					cityName: sender.city,
-					countryCode: sender.countryCode,
-					addressLine1: sender.address1,
-					addressLine2: sender.address2 || undefined,
-				},
-				contactInformation: {
-					email: sender.email,
-					phone: sender.phone,
-					companyName: sender.company,
-					fullName: sender.name,
-				},
+				postalCode: sender.postalCode,
+				cityName: sender.city,
+				countryCode: sender.countryCode,
+				addressLine1: sender.address1,
+				addressLine2: sender.address2 || undefined,
 			},
 			receiverDetails: {
-				postalAddress: {
-					postalCode: recipient.postalCode,
-					cityName: recipient.city,
-					countryCode: recipient.countryCode,
-					addressLine1: recipient.address1,
-					addressLine2: recipient.address2 || undefined,
-				},
-				contactInformation: {
-					email: recipient.email || "customer@example.com",
-					phone: recipient.phone || "+1234567890",
-					companyName: recipient.company || undefined,
-					fullName: recipient.name,
-				},
+				postalCode: recipient.postalCode,
+				cityName: recipient.city,
+				countryCode: recipient.countryCode,
+				addressLine1: recipient.address1,
+				addressLine2: recipient.address2 || undefined,
 			},
 		},
 		accounts: [
@@ -156,40 +160,11 @@ export function buildDHLRequest(sender, recipient, packages) {
 			},
 		],
 		productCode: "P",
-		plannedShippingDateAndTime: plannedShippingDateAndTime.toISOString().split('.')[0],
 		unitOfMeasurement: "metric",
 		isCustomsDeclarable: true,
-		monetaryAmount: [
-			{
-				typeCode: "declared",
-				value: totalValueGBP,
-				currency: "GBP",
-			},
-		],
-		requestAllValueAddedServices: false,
-		returnStandardProductsOnly: false,
-		nextBusinessDay: false,
+		currencyCode: "GBP",
+		getCostBreakdown: true,
 		packages: dhlPackages,
-		content: {
-			packages: dhlPackages.map((pkg, index) => ({
-				typeCode: "3BX",
-				weight: pkg.weight,
-				dimensions: pkg.dimensions,
-			})),
-			isCustomsDeclarable: true,
-			declaredValue: totalValueGBP,
-			declaredValueCurrency: "GBP",
-			exportDeclaration: {
-				lineItems: lineItems,
-				invoice: {
-					number: "INV-" + Date.now(),
-					date: new Date().toISOString().split('T')[0],
-				},
-				exportReason: "sale",
-				exportReasonType: "permanent",
-			},
-			description: "Leather and canvas goods",
-			incoterm: "DAP",
-		},
+		items: lineItems,
 	};
 }
