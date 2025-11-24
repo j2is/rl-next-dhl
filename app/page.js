@@ -917,13 +917,13 @@ export default function Home() {
 				</div>
 			)}
 
-			<button
+			{/* <button
 				className="test-button"
 				onClick={handleTestMockCall}
 				disabled={loading}
 			>
 				Test Mock Call
-			</button>
+			</button>*/}
 
 			<button
 				className="calculate-button"
