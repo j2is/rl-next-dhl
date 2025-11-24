@@ -44,8 +44,15 @@ npm install
 ```bash
 DHL_API_KEY=your_dhl_api_key_here
 DHL_API_SECRET=your_dhl_api_secret_here
+DHL_ACCOUNT_NUMBER=your_dhl_account_number_here
+DHL_USE_PRODUCTION=false
 NEXT_PUBLIC_SENTRY_DSN=your_sentry_dsn_here
 ```
+
+**Important**: 
+- Set `DHL_USE_PRODUCTION=false` to use the test environment (`https://express.api.dhl.com/mydhlapi/test`) for testing with your sandbox credentials
+- Set `DHL_USE_PRODUCTION=true` to use the production endpoint (`https://express.api.dhl.com/mydhlapi`) after DHL has approved your production access request
+- If you see "request production access" in your DHL account, use `DHL_USE_PRODUCTION=false` with your test credentials
 
 4. Run the development server:
 

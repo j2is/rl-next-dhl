@@ -152,7 +152,7 @@ export function buildDHLRequest(sender, recipient, packages) {
 		accounts: [
 			{
 				typeCode: "shipper",
-				number: "123456789",
+				number: "123456789", // This will be replaced in the API route with the actual account number
 			},
 		],
 		productCode: "P",

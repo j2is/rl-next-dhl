@@ -80,6 +80,34 @@ const PageStyles = styled.main`
     }
   }
 
+  .test-button {
+    width: 100%;
+    padding: 15px;
+    background: #666;
+    color: #fff;
+    border: none;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+
+    ${media.hoverOnly`
+      &:hover {
+        background: #555;
+      }
+    `}
+
+    &:disabled {
+      background: #999;
+      cursor: not-allowed;
+    }
+  }
+
   .package-summary {
     padding: 20px;
     border: 1px solid #000;
@@ -359,6 +387,49 @@ export default function Home() {
 			setRemovedPackages(new Set());
 		}
 	}, [selectedProducts.length]);
+
+	const handleTestMockCall = async () => {
+		setLoading(true);
+		setResults(null);
+		setRequestData(null);
+
+		try {
+			// Build POST request body for test environment
+			// Using your actual DHL credentials from environment variables
+			const requestData = {
+				method: "POST",
+				endpoint: "https://express.api.dhl.com/mydhlapi/test/rates",
+				note: "Using your DHL API credentials on test environment",
+			};
+
+			setRequestData(requestData);
+
+			// Call our server-side endpoint to avoid CORS issues
+			// The endpoint uses test credentials (jai/viewer123) and makes a POST request
+			const response = await fetch("/api/dhl-rates-test", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({}), // Server will use default test data
+			});
+
+			const data = await response.json();
+
+			if (!response.ok) {
+				toast.error(data.error || "Failed to test DHL API");
+				console.error("Test API Error:", data);
+			} else {
+				setResults(data);
+				toast.success("Test API call successful");
+			}
+		} catch (error) {
+			console.error("Test API Error:", error);
+			toast.error("An error occurred while testing DHL API");
+		} finally {
+			setLoading(false);
+		}
+	};
 
 	const handleCalculate = async () => {
 		if (selectedProducts.length === 0) {
@@ -845,6 +916,14 @@ export default function Home() {
 					</table>
 				</div>
 			)}
+
+			<button
+				className="test-button"
+				onClick={handleTestMockCall}
+				disabled={loading}
+			>
+				Test Mock Call
+			</button>
 
 			<button
 				className="calculate-button"
