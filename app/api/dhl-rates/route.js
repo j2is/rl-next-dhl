@@ -50,7 +50,7 @@ export async function POST(request) {
 			"x-version": "3.1.0",
 		};
 
-		console.log("DHL API Request:", {
+		console.log("[API ROUTE] DHL API Request:", {
 			endpoint: apiEndpoint,
 			environment: dhlUseProduction ? "production" : "test",
 			hasBasicAuth: !!headers.Authorization,
@@ -58,6 +58,25 @@ export async function POST(request) {
 			accountNumber: dhlAccountNumber?.substring(0, 3) + "***",
 			itemsCount: body.items?.length,
 		});
+		
+		console.log("[API ROUTE] Request body items (detailed):", 
+			body.items?.map((item, idx) => ({
+				index: idx,
+				number: item.number,
+				description: item.description,
+				weight: item.weight,
+				weightType: typeof item.weight,
+				weightValue: item.weight,
+				weightString: String(item.weight),
+				weightIsNaN: isNaN(item.weight),
+				weightIsZero: item.weight === 0,
+				weightIsNull: item.weight === null,
+				weightIsUndefined: item.weight === undefined,
+				fullItem: item,
+			})) || []
+		);
+		
+		console.log("[API ROUTE] Full request body JSON:", JSON.stringify(body, null, 2));
 
 		const response = await fetch(apiEndpoint, {
 			method: "POST",
